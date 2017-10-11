@@ -77,7 +77,7 @@ ert_errands_to_disable: none
 opsman_major_minor_version: ^1\.12\..*$
 
 # PCF Elastic Runtime minor version to install
-ert_major_minor_version: ^1\.12\..*$
+ert_major_minor_version: ^1\.12\..*srt\..$
 
 # DB Creds
 # Usernames must be 16 characters or fewer
