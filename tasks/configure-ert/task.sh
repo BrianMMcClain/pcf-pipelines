@@ -80,45 +80,22 @@ cf_resources=$(
     --arg iaas $pcf_iaas \
     '
     {
-      "consul_server": {"internet_connected": false},
-      "nats": {"internet_connected": false},
-      "nfs_server": {"internet_connected": false},
-      "mysql_proxy": {
-        "instances": 0,
-        "internet_connected": false
-      },
-      "mysql": {
-        "instances": 0,
-        "internet_connected": false
-      },
       "backup-prepare": {"internet_connected": false},
-      "diego_database": {"internet_connected": false},
-      "uaa": {"internet_connected": false},
-      "cloud_controller": {"internet_connected": false},
-      "ha_proxy": {"internet_connected": false},
+      "compute": {"internet_connected": false},
+      "control": {"internet_connected": false},
+      "database": {"internet_connected": false},
       "router": {"internet_connected": false},
       "mysql_monitor": {
         "instances": 0,
         "internet_connected": false
       },
-      "clock_global": {"internet_connected": false},
-      "cloud_controller_worker": {"internet_connected": false},
-      "diego_brain": {"internet_connected": false},
-      "diego_cell": {"internet_connected": false},
-      "loggregator_trafficcontroller": {"internet_connected": false},
-      "syslog_adapter": {"internet_connected": false},
-      "syslog_scheduler": {"internet_connected": false},
-      "doppler": {"internet_connected": false},
       "tcp_router": {"internet_connected": false},
       "smoke-tests": {"internet_connected": false},
       "push-apps-manager": {"internet_connected": false},
       "notifications": {"internet_connected": false},
       "notifications-ui": {"internet_connected": false},
       "push-pivotal-account": {"internet_connected": false},
-      "autoscaling": {"internet_connected": false},
-      "autoscaling-register-broker": {"internet_connected": false},
       "nfsbrokerpush": {"internet_connected": false},
-      "bootstrap": {"internet_connected": false},
       "mysql-rejoin-unsafe": {"internet_connected": false}
     }
 
