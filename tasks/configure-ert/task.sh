@@ -1,11 +1,7 @@
 #!/bin/bash
 set -eu
 
-echo "Began configure-ert"
-
 export OPSMAN_DOMAIN_OR_IP_ADDRESS="opsman.$pcf_ert_domain"
-
-echo "Generating certs"
 
 source pcf-pipelines/functions/generate_cert.sh
 
@@ -71,9 +67,6 @@ cf_network=$(
     '
 )
 
-echo "Network:"
-echo $cf_network
-
 cf_resources=$(
   jq -n \
     --arg terraform_prefix $terraform_prefix \
@@ -112,9 +105,6 @@ cf_resources=$(
     end
     '
 )
-
-echo "Resources"
-echo $cf_resources
 
 cf_properties=$(
   jq -n \
@@ -354,21 +344,6 @@ cf_properties=$(
     }
     '
 )
-
-echo "properties"
-echo $cf_properties
-
-
-echo "om-linux \
-  --target https://$OPSMAN_DOMAIN_OR_IP_ADDRESS \
-  --username $OPS_MGR_USR \
-  --password $OPS_MGR_PWD \
-  --skip-ssl-validation \
-  configure-product \
-  --product-name cf \
-  --product-properties \"$cf_properties\" \
-  --product-network \"$cf_network\" \
-  --product-resources \"$cf_resources\""
 
 om-linux \
   --target https://$OPSMAN_DOMAIN_OR_IP_ADDRESS \
