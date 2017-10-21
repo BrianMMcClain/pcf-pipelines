@@ -461,26 +461,23 @@ cf_resources=$(
     --arg diego_brain_nsx_lb_port "${DIEGO_BRAIN_NSX_LB_PORT}" \
     '
     {
-      "consul_server": { "instances": $consul_server_instances },
-      "nats": { "instances": $nats_instances },
-      "nfs_server": { "instances": $nfs_server_instances },
-      "mysql_proxy": { "instances": $mysql_proxy_instances },
-      "mysql": { "instances": $mysql_instances },
-      "backup-prepare": { "instances": $backup_prepare_instances },
-      "diego_database": { "instances": $diego_database_instances },
-      "uaa": { "instances": $uaa_instances },
-      "cloud_controller": { "instances": $cloud_controller_instances },
-      "ha_proxy": { "instances": $ha_proxy_instances },
-      "router": { "instances": $router_instances },
-      "mysql_monitor": { "instances": $mysql_monitor_instances },
-      "clock_global": { "instances": $clock_global_instances },
-      "cloud_controller_worker": { "instances": $cloud_controller_worker_instances },
-      "diego_brain": { "instances": $diego_brain_instances },
-      "diego_cell": { "instances": $diego_cell_instances },
-      "loggregator_trafficcontroller": { "instances": $loggregator_tc_instances },
-      "tcp_router": { "instances": $tcp_router_instances },
-      "syslog_adapter": { "instances": $syslog_adapter_instances },
-      "doppler": { "instances": $doppler_instances }
+      "backup-prepare": {"internet_connected": false},
+      "compute": {"internet_connected": false},
+      "control": {"internet_connected": false},
+      "database": {"internet_connected": false},
+      "router": {"internet_connected": false},
+      "mysql_monitor": {
+        "instances": 0,
+        "internet_connected": false
+      },
+      "tcp_router": {"internet_connected": false},
+      "smoke-tests": {"internet_connected": false},
+      "push-apps-manager": {"internet_connected": false},
+      "notifications": {"internet_connected": false},
+      "notifications-ui": {"internet_connected": false},
+      "push-pivotal-account": {"internet_connected": false},
+      "nfsbrokerpush": {"internet_connected": false},
+      "mysql-rejoin-unsafe": {"internet_connected": false}
     }
 
     |
