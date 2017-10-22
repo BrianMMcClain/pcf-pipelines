@@ -483,6 +483,14 @@ cf_resources=$(
     |
 
     if $ha_proxy_elb_name != "" then
+      .router |= . + { "elb_names": [ $ha_proxy_elb_name ] }
+    else
+      .
+    end
+
+    |
+
+    if $ha_proxy_elb_name != "" then
       .ha_proxy |= . + { "elb_names": [ $ha_proxy_elb_name ] }
     else
       .
