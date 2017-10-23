@@ -7,7 +7,7 @@ git_private_key:
 ### PCF Object Params
 ##############################################
 opsman_major_minor_version: '1\.12\..*' # Reqd
-ert_major_minor_version: '1\.12\..*' # Reqd
+ert_major_minor_version: '^1\.12\..*srt\..$' # Reqd
 
 # Pivent Download token
 pivnet_token: CHANGEME
