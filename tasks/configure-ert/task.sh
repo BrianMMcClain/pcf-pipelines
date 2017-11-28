@@ -84,7 +84,6 @@ cf_resources=$(
       },
       "tcp_router": {"internet_connected": false},
       "smoke-tests": {"internet_connected": false},
-      "push-apps-manager": {"internet_connected": false},
       "push-pivotal-account": {"internet_connected": false}
     }
 
