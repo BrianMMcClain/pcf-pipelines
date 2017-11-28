@@ -87,8 +87,7 @@ cf_resources=$(
       "push-apps-manager": {"internet_connected": false},
       "notifications": {"internet_connected": false},
       "notifications-ui": {"internet_connected": false},
-      "push-pivotal-account": {"internet_connected": false},
-      "nfsbrokerpush": {"internet_connected": false}
+      "push-pivotal-account": {"internet_connected": false}
     }
 
     |
