@@ -82,9 +82,7 @@ cf_resources=$(
         "instances": 0,
         "internet_connected": false
       },
-      "tcp_router": {"internet_connected": false},
-      "smoke-tests": {"internet_connected": false},
-      "push-pivotal-account": {"internet_connected": false}
+      "tcp_router": {"internet_connected": false}
     }
 
     |
