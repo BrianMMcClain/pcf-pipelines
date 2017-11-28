@@ -215,7 +215,6 @@ cf_properties=$(
       ".cloud_controller.allow_app_ssh_access": { "value": true },
       ".cloud_controller.security_event_logging_enabled": { "value": true },
       ".router.disable_insecure_cookies": { "value": false },
-      # ".push-apps-manager.company_name": { "value": "pcf-\($iaas)" },
       ".mysql_monitor.recipient_email": { "value" : $mysql_monitor_recipient_email }
     }
 
@@ -290,18 +289,6 @@ cf_properties=$(
         ".properties.mysql_backups": {"value": "disable"}
       }
     end
-
-    +
-
-    # SSL Termination
-    # {
-    #   ".properties.networking_poe_ssl_cert": {
-    #     "value": {
-    #       "cert_pem": $cert_pem,
-    #       "private_key_pem": $private_key_pem
-    #     }
-    #   }
-    # }
 
     +
 
