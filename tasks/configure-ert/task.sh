@@ -88,8 +88,7 @@ cf_resources=$(
       "notifications": {"internet_connected": false},
       "notifications-ui": {"internet_connected": false},
       "push-pivotal-account": {"internet_connected": false},
-      "nfsbrokerpush": {"internet_connected": false},
-      "mysql-rejoin-unsafe": {"internet_connected": false}
+      "nfsbrokerpush": {"internet_connected": false}
     }
 
     |
