@@ -17,7 +17,7 @@ resources:
   type: git
   source:
     uri: https://github.com/BrianMMcClain/pcf-pipelines
-    branch: master
+    branch: "2.0"
 
 - name: terraform-state
   type: gcs
